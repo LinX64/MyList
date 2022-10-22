@@ -5,11 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
 
 typealias Inflate<T> = (LayoutInflater, ViewGroup?, Boolean) -> T
 
-abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflate<VB>) : Fragment() {
+abstract class BaseFragment<VB : ViewBinding, out VM : BaseViewModel>(private val inflate: Inflate<VB>) : Fragment() {
+
+    protected abstract val mViewModel: ViewModel
 
     private var _binding: VB? = null
     val binding: VB get() = _binding!!
