@@ -1,4 +1,4 @@
-# MyList
+# My Servers List
 An example of Flow, Clean Architecture, Koin, ListAdapter and Usecases.
 
 ### Why not RecyclerView Adapter, ListAdapter?
