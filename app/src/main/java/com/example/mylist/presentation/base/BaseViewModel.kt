@@ -1,7 +1,6 @@
 package com.example.mylist.presentation.base
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import org.koin.core.component.KoinComponent
 
-abstract class BaseViewModel(appContext: Application) : AndroidViewModel(appContext), KoinComponent
+abstract class BaseViewModel : ViewModel(), KoinComponent
